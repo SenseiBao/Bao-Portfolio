@@ -30,7 +30,7 @@ export default function Hero() {
           className="text-2xl md:text-4xl font-light mb-10"
           style={{ color: "#ddd" }}
         >
-          I&apos;m a full stack web developer.
+          I&apos;m an aspiring software engineer.
         </p>
 
         <button

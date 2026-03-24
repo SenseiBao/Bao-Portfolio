@@ -13,7 +13,8 @@ const socials = [
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -22,9 +23,29 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    await new Promise((r) => setTimeout(r, 1200));
-    setStatus("sent");
-    setForm({ name: "", email: "", message: "" });
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setErrorMsg(data.error || "Something went wrong.");
+        setStatus("error");
+        return;
+      }
+
+      setStatus("sent");
+      setForm({ name: "", email: "", message: "" });
+    } catch {
+      setErrorMsg("Network error. Please try again.");
+      setStatus("error");
+    }
   };
 
   const inputStyle: React.CSSProperties = {
@@ -122,6 +143,37 @@ export default function Contact() {
                   style={{ background: "#e05c77", color: "#fff", border: "none" }}
                 >
                   Send another
+                </button>
+              </div>
+            ) : status === "error" ? (
+              <div
+                className="flex flex-col items-center justify-center h-full gap-4 rounded-xl p-10"
+                style={{
+                  background: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(224,92,119,0.2)",
+                }}
+              >
+                <div
+                  className="w-14 h-14 rounded-full flex items-center justify-center"
+                  style={{ background: "rgba(224,92,119,0.15)" }}
+                >
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e05c77" strokeWidth="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </div>
+                <h4 className="text-xl font-semibold" style={{ color: "#fff" }}>
+                  Something went wrong
+                </h4>
+                <p className="text-sm text-center" style={{ color: "#aaa" }}>
+                  {errorMsg}
+                </p>
+                <button
+                  onClick={() => setStatus("idle")}
+                  className="mt-2 px-6 py-2 text-sm font-semibold rounded cursor-pointer"
+                  style={{ background: "#e05c77", color: "#fff", border: "none" }}
+                >
+                  Try again
                 </button>
               </div>
             ) : (

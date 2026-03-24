@@ -107,14 +107,15 @@ export default function Projects() {
         >
           {/* Screenshot left */}
           <div
-            className="relative min-h-64 md:min-h-80 overflow-hidden"
+            className="relative overflow-hidden flex items-center justify-center"
             style={{ background: project.color + "11" }}
           >
             <Image
               src={project.screenshot}
               alt={`${project.title} screenshot`}
-              fill
-              className="object-cover object-top"
+              width={800}
+              height={600}
+              className="w-full h-auto block"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             {/* Gradient overlay for readability */}

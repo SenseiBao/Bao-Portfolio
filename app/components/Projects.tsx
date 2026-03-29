@@ -55,10 +55,10 @@ const projects: Project[] = [
   {
     id: 4,
     title: "Lock-In",
-    subtitle: "Digital Card Game",
+    subtitle: "Real-Time Multiplayer Card Game",
     description:
-      "A digital implementation of the stack-based party card game Lock-In, built with React, Vite, and Tailwind CSS. Two teams compete with a Describer and Guessers — draw cards, roll dice for power-up rounds (Charades, Low Bandwidth, Simultaneous Guessing), and track scores live. Also features a digital dice mode and background music.",
-    tags: ["React", "Vite", "Tailwind CSS", "JavaScript"],
+      "A digital implementation of a custom stack-based card game, built with React, Vite, Tailwind CSS, and Supabase for real-time sync across all devices. Players join via QR code into separate Describer and Guesser views. Features a power-up dice system, buzzer button, taboo-style word list, music player, timer, scoreboard, and the signature \"Lock-In\" mechanic where committing a wrong guess hands the opponent a free guess.",
+    tags: ["React", "Vite", "Tailwind CSS", "Supabase"],
     liveUrl: "https://lock-in-web-kappa.vercel.app/",
     repoUrl: "https://github.com/SenseiBao/Lock-In-Web",
     color: "#eab308",

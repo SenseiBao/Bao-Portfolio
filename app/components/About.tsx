@@ -75,12 +75,15 @@ export default function About() {
               <p className="text-base leading-relaxed mb-4" style={{ color: "#bbb" }}>
                 I&apos;m a Computer Science student at the{" "}
                 <span style={{ color: "#e05c77" }}>University of Virginia</span>{" "}
-                with a passion for machine learning, AI, and full-stack &amp; back-end
-                development. I&apos;ve applied that hands-on through an internship at{" "}
+                with a passion for machine learning, AI, and full-stack and back-end
+                development. I&apos;ve gotten to apply that hands-on through an internship at{" "}
                 <span style={{ color: "#e05c77" }}>Raytheon</span>{" "}
-                in Huntsville, where I worked as a Systems Integration &amp; Testing Engineer
-                on radar systems. I&apos;m actively building toward a career as a Software
-                or Systems Engineer, one project at a time.
+                in Huntsville, where I worked as a Systems Integration and Testing Engineer
+                on radar systems. This coming August I&apos;ll be joining{" "}
+                <span style={{ color: "#e05c77" }}>Capital One</span>{" "}
+                as part of the incoming{" "}
+                <span style={{ color: "#e05c77" }}>Technology Development Program</span>{" "}
+                cohort. I&apos;m excited to keep growing as an engineer and see where it takes me.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "#bbb" }}>
                 Outside of the keyboard, I&apos;ve been playing piano for 17 years, spend time

@@ -74,22 +74,20 @@ export default function About() {
             <div>
               <p className="text-base leading-relaxed mb-4" style={{ color: "#bbb" }}>
                 I&apos;m a Computer Science student at the{" "}
-                <span style={{ color: "#e05c77" }}>University of Virginia</span>{" "}
-                with a passion for machine learning, AI, and full-stack and back-end
-                development. I&apos;ve gotten to apply that hands-on through an internship at{" "}
-                <span style={{ color: "#e05c77" }}>Raytheon</span>{" "}
-                in Huntsville, where I worked as a Systems Integration and Testing Engineer
-                on radar systems. This coming August I&apos;ll be joining{" "}
-                <span style={{ color: "#e05c77" }}>Capital One</span>{" "}
-                as part of the incoming{" "}
-                <span style={{ color: "#e05c77" }}>Technology Development Program</span>{" "}
-                cohort. I&apos;m excited to keep growing as an engineer and see where it takes me.
+                <span style={{ color: "#e05c77" }}>University of Virginia</span>, and
+                currently a{" "}
+                <span style={{ color: "#e05c77" }}>TDP Associate</span> at{" "}
+                <span style={{ color: "#e05c77" }}>Capital One</span>. I care a lot about
+                machine learning, AI, and full-stack and back-end work — and I&apos;ve gotten
+                to put that into practice before, including an internship at{" "}
+                <span style={{ color: "#e05c77" }}>Raytheon</span> in Huntsville as a
+                Systems Integration and Testing Engineer on radar systems. I&apos;m excited
+                to keep growing as an engineer and see where it takes me.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "#bbb" }}>
-                Outside of the keyboard, I&apos;ve been playing piano for 17 years, spend time
-                at the gym, collect and solve Rubik&apos;s cubes, and enjoy a good game of
-                bowling. I believe the same drive that gets you to the gym or through a tough
-                solve is what makes you a better engineer.
+                I&apos;ve been playing piano for 17 years, hit the gym when I can, and
+                collect and solve Rubik&apos;s cubes. Right now I&apos;m really into bowling —
+                I&apos;ll take any excuse to get a few games in.
               </p>
             </div>
 
